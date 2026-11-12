@@ -1,11 +1,10 @@
-import { Button } from "@/components/ui/button";
+import Layout from "@/components/layout";
 
 function App() {
   return (
-    <div className="p-8 space-y-4">
-      <h1 className="text-xl font-bold">Posts Reader</h1>
-      <Button>It works</Button>
-    </div>
+    <Layout>
+      <p>Posts will appear here in Lab 11.</p>
+    </Layout>
   );
 }
 
