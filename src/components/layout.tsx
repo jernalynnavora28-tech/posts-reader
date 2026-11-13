@@ -1,15 +1,16 @@
-import { ModeToggle } from "@/components/mode-toggle";
+import { Outlet } from "react-router";
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+export default function Layout() {
   return (
-    <div className="min-h-screen bg-background text-foreground flex flex-col">
-      <header className="border-b px-6 py-4 flex items-center justify-between">
-        <h1 className="font-bold text-lg">Posts</h1>
-        <ModeToggle />
+    <div className="min-h-screen bg-background text-foreground">
+      <header>
+        {/* Your navigation or header elements go here */}
       </header>
-      <main className="flex-1 p-6">{children}</main>
+      <main>
+        <Outlet />
+      </main>
     </div>
   );
-};
+}
 
-export default Layout;
+export const gutter = "grid gap-x-6 sm:grid-cols-[3.5rem_minmax(0,1fr)]";

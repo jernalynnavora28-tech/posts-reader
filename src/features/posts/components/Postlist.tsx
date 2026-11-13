@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { usePosts } from "../features/posts/posts.hooks";
-import PostRow, { PostRowSkeleton } from "../features/posts/post";
+import { usePosts } from "./posts.hooks";
+import PostRow, { PostRowSkeleton } from "./post";
 
 const PostList = () => {
   const { isPending, isError, error, data, refetch } = usePosts();
@@ -52,3 +52,5 @@ const PostList = () => {
     </div>
   );
 };
+
+export default PostList;
